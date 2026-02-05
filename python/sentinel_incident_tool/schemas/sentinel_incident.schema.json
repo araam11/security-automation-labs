@@ -1,0 +1,16 @@
+{
+  "incidentId": "string",
+  "title": "string",
+  "severity": "Informational | Low | Medium | High",
+  "status": "New | Active | Closed",
+  "createdTimeUtc": "datetime",
+  "alerts": [
+    {
+      "alertId": "string",
+      "product": "string",
+      "severity": "Low | Medium | High",
+      "entities": ["string"],
+      "eventTime": "datetime"
+    }
+  ]
+}

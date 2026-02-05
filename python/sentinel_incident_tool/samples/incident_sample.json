@@ -1,0 +1,23 @@
+{
+  "incidentId": "INC-1001",
+  "title": "Suspicious logon activity detected",
+  "severity": "High",
+  "status": "New",
+  "createdTimeUtc": "2026-02-05T17:10:00Z",
+  "alerts": [
+    {
+      "alertId": "ALERT-01",
+      "product": "Defender for Identity",
+      "severity": "High",
+      "entities": ["user:jsmith", "ip:10.10.5.23"],
+      "eventTime": "2026-02-05T17:05:00Z"
+    },
+    {
+      "alertId": "ALERT-02",
+      "product": "Defender for Endpoint",
+      "severity": "Medium",
+      "entities": ["device:WS-23"],
+      "eventTime": "2026-02-05T17:06:30Z"
+    }
+  ]
+}
