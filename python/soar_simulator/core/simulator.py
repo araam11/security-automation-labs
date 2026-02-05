@@ -1,9 +1,11 @@
 from typing import Dict, Any
-from rules.decision_rules import evaluate_incident
+from rules.loader import load_rules
+from rules.engine import evaluate_rules
 
 
 def simulate_soar(incident: Dict[str, Any]) -> Dict[str, Any]:
-    decisions = evaluate_incident(incident)
+    policy = load_rules()
+    decisions = evaluate_rules(incident, policy)
 
     return {
         "incidentId": incident["id"],

@@ -10,6 +10,4 @@
 
 ## Decision Rationale
 
-- Notification enabled for all incidents.
-- Severity is High; device tagging enabled for triage.
-- High severity incident; isolation may be required but needs approval.
+- High severity incidents may require containment actions, but isolation must be approved to avoid business impact.

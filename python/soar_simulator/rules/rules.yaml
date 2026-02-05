@@ -1,0 +1,34 @@
+defaults:
+  notify: true
+  tag: false
+  propose_isolation: false
+  require_approval: false
+
+rules:
+  - name: High severity incident
+    if:
+      severity: High
+    then:
+      tag: true
+      propose_isolation: true
+      require_approval: true
+    rationale: >
+      High severity incidents may require containment actions,
+      but isolation must be approved to avoid business impact.
+
+  - name: Medium severity incident
+    if:
+      severity: Medium
+    then:
+      tag: true
+    rationale: >
+      Medium severity incidents warrant triage tagging,
+      but not isolation.
+
+  - name: Low or Informational severity
+    if:
+      severity: [Low, Informational]
+    then:
+      notify: true
+    rationale: >
+      Low-risk incidents are tracked and communicated only.
